@@ -1,13 +1,12 @@
 {{-- template.blade.php --}}
 <html>
     <head>
-        <title>Page Name</title>
+        <title>Cat Page </title>
         <link rel="stylesheet" href="/css/style.css">
+        <link rel="icon" href="/img/cat.jpg" type="image/jpg" sizes="16x16">
     </head>
     <body>
         @include('partials.header')
-
-        <img src="/img/img.jpg" alt="cats">
 
         <div class="container">
             @yield('content')

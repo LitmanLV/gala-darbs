@@ -4,7 +4,7 @@
 <body>
 @include('partials.footer')
 
-<p>nothing else</p> 
+<p>nothing else</p>
 
 @yield('content')
 

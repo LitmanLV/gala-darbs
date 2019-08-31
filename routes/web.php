@@ -22,15 +22,65 @@ Route::get('/test', function () {
 
 });
 
-Route::get('/satan', function () {
-    return ' BURN';
+Route::get('/test/blog', function () {
+    /*$blogs = [
+        [
+            'id' => 1,
+            'title' => 'Mans blogs',
+            'body' => 'yolo'
+        ],
+        [
+            'id' => 2,
+            'title' => 'Mans blogs2',
+            'body' => 'yolo2'
+        ],
+    ];*/
+
+    $blogs = \App\Post::take(3)
+        ->get();
+
+    return view('blog', [
+        'myblogs' => $blogs,
+    ]);
 });
 
 Route::get('/test/blog', function () {
-    return view('blog');
+        /*$blogs = [
+            [
+                'id' => 1,
+                'title' => 'Mans blogs',
+                'body' => 'yolo'
+            ],
+            [
+                'id' => 2,
+                'title' => 'Mans blogs2',
+                'body' => 'yolo2'
+            ],
+        ];*/
+
+        $blogs = \App\Post::take(3)
+            ->get();
+
+        return view('blog', [
+            'myblogs' => $blogs,
+        ]);
 });
-Route::get('/test/lapa', function () {
-    return view('lapa');
+
+Route::get('/test/blog/all', function () {
+    $blogs = \App\Post::get();
+    return view('all-blog', [
+        'myblogs' => $blogs,
+    ]);
+});
+
+Route::get('test/blog/{id}', function ($id) {
+    $single_blog = \App\Post::find($id);
+    if ($single_blog == null) {
+        abort(404);
+    }
+    return view('single-blog', [
+        'blog_post' => $single_blog,
+    ]);
 });
 
 
