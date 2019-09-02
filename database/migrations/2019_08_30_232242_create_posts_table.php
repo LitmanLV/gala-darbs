@@ -20,7 +20,7 @@ class CreatePostsTable extends Migration
             $table->string('img');
 
             $table->text('body');
-            $table->text('except');
+            $table->text('excerpt');
 
             $table->string('author');
             $table->string('slug');

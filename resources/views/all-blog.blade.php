@@ -4,17 +4,26 @@
 
 @section('content')
 
-<h1>Visi mani lieliskie bloga ieraksti ir šeit</h1>
+<div class="blog-post-small-big">
+        <h2><b>Karsts jaunums: {{$lastitem->title}}</b></h2>
+        <img src="{{ Storage::url($lastitem->img) }}" alt="">
+        <div></div>
+        <span>{{$lastitem->created_at}}</span>
+    </div>
+
+<h2></h2>
 
 <div class="blog-container">
 @foreach ($myblogs as $item)
-    <div class="card">
+    <div class="blog-post-small">
         <h4>{{$item->title}}</h4>
-        <img src="{{$item->img}}" alt="">
-        <p>{{$item->body}}</p>
-    <span>{{$item->created_at}}</span>
+        <img src="{{ Storage::url($item->img) }}" alt="">
+        <div></div>
+        <span>{{$item->created_at}}</span>
+        <p>{{$item->excerpt}}</p>
     </div>
-</div>
 @endforeach
+
+</div>
 
 @endsection

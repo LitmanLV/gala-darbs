@@ -1,17 +1,14 @@
 <html>
 <head>
-<title>LAPAS VĀRDS</title>
-<body>
-@include('partials.footer')
-
-<p>nothing else</p>
-
-@yield('content')
-
-@include('partials.header')
-</body>
-
+<title>WELCOME</title>
+<link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/css/app.css">
 </head>
+<body>
+<div class='welcome-container'>
+        <input type="button" onclick="location.href='{{$enter_url}}';" value="ENTER" />
+</div>
+</body>
 
 
 </html>
