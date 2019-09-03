@@ -11,17 +11,17 @@
 
 
     <div class="my-slider">
-    @foreach ($myblogs as $item)
-        <div class="blog-post-card">
-            <h4>{{$item->title}}</h4>
-            <img src="{{ Storage::url($item->img) }}" alt="">
-            <div></div>
-            <span>{{$item->created_at}}</span>
-            <p>{{$item->excerpt}}</p>
+        @foreach ($myblogs as $item)
+        <div onclick="window.location='/test/blog/{{$item->slug}}';" class="blog-post-card">
+                <h4>{{$item->title}}</h4>
+                <img src="{{ Storage::url($item->img) }}" alt="">
+                <div></div>
+                <span>{{$item->created_at}}</span>
+                <p>{{$item->excerpt}}</p>
         </div>
         @endforeach
     </div>
-    <a href="/test/blog/all" class="all-blog-posts">Visi ieraksti</a>
+    <a href="/test/blog/all" class="all-blog-posts-button">Visi ieraksti</a>
 
     <script type="module">
             tns({
@@ -31,7 +31,8 @@
               controlsText: ['&#8592;', '&#8594;'],
               autoplay: true,
               autoplayButtonOutput: false,
-              nav: false
+              nav: false,
+              controlsPosition:'none'
             });
     </script>
 
@@ -41,7 +42,7 @@
 
 <div class="blog-container-special">
         @foreach ($randomBlogs as $item)
-            <div class="blog-post-small">
+            <div class="blog-post-small" onclick="window.location='/test/blog/{{$item->slug}}';">
                 <h4>{{$item->title}}</h4>
                 <img src="{{ Storage::url($item->img) }}" alt="">
                 <div></div>
@@ -49,9 +50,4 @@
                 <p>{{$item->excerpt}}</p>
             </div>
         @endforeach
-
-        </div>
-</div>
-@endsection
-
-
+    @endsection

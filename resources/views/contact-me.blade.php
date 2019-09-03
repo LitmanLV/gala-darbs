@@ -51,24 +51,24 @@
     <div class="review">
         <img class="review-img" src="/img/pukainis.jpg" alt="cat">
         <div> <i>
-                Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                Maecenas congue ante et cursus dignissim. Cras finibus augue libero.</i>
+                Leave the plastic bag and pet right here, no not there, here,
+                no fool, right here.. that other cat smells funny
+                you should really give me all the treats because i smell the best and omg you finally got the right spot and i love you right now. </i>
             <div><b>Pūkainis</b>, Pieredzējis ņaudētājs.</div>
         </div>
     </div>
     <div class="review">
             <img class="review-img" src="/img/rizais.jpg" alt="cat">
             <div><i>
-                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                    Maecenas congue ante et cursus dignissim. Cras finibus augue libero.</i>
+                    Run around the house at 4 in the morning toilet paper attack
+                     claws fluff everywhere meow miao french ciao litterbox chew on cable, my slave human didn't give me any food so i pooped on the floor. </i>
                 <div><b>Rižais</b>, Ielas bosiks.</div>
             </div>
         </div>
         <div class="review">
                 <img class="review-img" src="/img/goldeneyes.jpg" alt="cat">
                 <div> <i>
-                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                    Maecenas congue ante et cursus dignissim. Cras finibus augue libero.</i>
+                        Sitting in a box groom yourself 4 hours - checked, have your beauty sleep 18 hours - checked, be fabulous for the rest of the day - checked.</i>
                     <div><b>Zeltacis</b>, Normāls mājas kaķis.</div>
                 </div>
             </div>

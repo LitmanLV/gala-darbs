@@ -16,7 +16,7 @@
 
     <div class="random-blog-container">
             @foreach ($random_blogs as $item)
-                <div class="blog-post-small">
+                <div class="blog-post-small" onclick="window.location='/test/blog/{{$item->slug}}';">
                     <h4>{{$item->title}}</h4>
                     <img src="{{ Storage::url($item->img) }}" alt="">
                     <div></div>
@@ -24,8 +24,8 @@
                     <p>{{$item->excerpt}}</p>
                 </div>
             @endforeach
-
     </div>
-    <a href="/test/blog/all" class="all-blog-posts">Visi ieraksti</a>
+    <a href="/test/blog/all" class="all-blog-posts-button">Visi ieraksti</a>
+
 
 @endsection

@@ -78,7 +78,7 @@ Route::post('/test/blog/create/submit', function(Request $request) {
         'body'     => 'required',
         'excerpt'  => 'required',
         'author'   => 'required',
-        'slug'     => 'required',
+        'slug'     => 'required|unique:posts',
     ]);
     if ($validator->fails()) {
         return redirect('/test/blog/create')
@@ -101,17 +101,18 @@ Route::post('/test/blog/create/submit', function(Request $request) {
     return redirect('/test/blog/create')->with('success', 'Ieraksts saglabāts');
 })->middleware('auth');
 
-Route::get('test/blog/{id}', function ($id) {
-    $single_blog = \App\Post::find($id);
-
-    $random_blogs = \App\Post::orderByRaw('RAND()')
-    ->where('id', '!=', $id)
-    ->take(3)
-    ->get();
+Route::get('test/blog/{slug}', function ($slug) {
+    $single_blog = \App\Post::where("slug", $slug)->get()->first();
 
     if ($single_blog == null) {
         abort(404);
     }
+
+    $random_blogs = \App\Post::orderByRaw('RAND()')
+    ->where('id', '!=', $single_blog->id)
+    ->take(3)
+    ->get();
+
     return view('single-blog', [
         'blog_post' => $single_blog,
         'random_blogs' => $random_blogs
