@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="/css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/tiny-slider.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/min/tiny-slider.js"></script>
-        <link rel="icon" href="/img/cat.jpg" type="image/jpg" sizes="16x16">
+        <link rel="icon" href="https://image.flaticon.com/icons/svg/23/23427.svg" type="image/jpg" sizes="16x16">
     </head>
     <body>
         @include('partials.header')

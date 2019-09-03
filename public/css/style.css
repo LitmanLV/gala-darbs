@@ -139,13 +139,14 @@
     .welcome-container {
         width: 100%;
         height: 100%;
-        background: url(/img/vf.jpg);
+        background: url(/img/punkti.jpg);
         display:flex;
         justify-content: center;
         align-items: center;
     }
     .welcome-container button {
         height: 40px;
+
     }
     .to-top-button{
         display: none;
@@ -229,5 +230,10 @@
         background-color: black;
         border: none;
         border-radius: 5px;
+    }
+
+    .all-blog-posts-button:hover {
+        color: #fff;
+        text-decoration: none;
     }
 

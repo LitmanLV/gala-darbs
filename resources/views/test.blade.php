@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>WELCOME</title>
+<title>WELCOME TO CATNESS</title>
 <link rel="stylesheet" href="/css/style.css">
         <link rel="stylesheet" href="/css/app.css">
 </head>
