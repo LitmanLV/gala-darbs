@@ -7,8 +7,6 @@
 <div class="blog-post-small-big">
         <h2><b>Karsts jaunums: {{$lastitem->title}}</b></h2>
         <img src="{{ Storage::url($lastitem->img) }}" alt="">
-        <div></div>
-        <span>{{$lastitem->created_at}}</span>
     </div>
 
 <h2></h2>
